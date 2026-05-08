@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
-    { name = "Muhammad Hasan Ferdous" },
+    { name = "Muhammad Hasan Ferdous", email = "h.ferdous@umbc.edu" },
     { name = "Uzma Hasan" },
     { name = "Md Osman Gani" },
 ]
