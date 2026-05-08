@@ -65,7 +65,7 @@ Homepage = "https://github.com/hferdous/CDANs"
 Documentation = "https://hferdous.github.io/CDANs/"
 Repository = "https://github.com/hferdous/CDANs"
 Issues = "https://github.com/hferdous/CDANs/issues"
-Changelog = "https://github.com/hferdous/CDANs/blob/main/CHANGELOG.md"
+Changelog = "https://github.com/hferdous/CDANs/blob/master/CHANGELOG.md"
 Paper = "https://proceedings.mlr.press/v219/ferdous23a.html"
 
 [tool.setuptools.packages.find]
