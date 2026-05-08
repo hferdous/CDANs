@@ -216,7 +216,7 @@ Status of the Python port:
 | Step 4: v-structure orientation                           | ✓      |
 | Step 4: Meek's rules R1–R4                                | ✓      |
 | Synthetic data generator                                  | ✓      |
-| Independent change principle for direction inference      | ☐ (TODO; the MATLAB `infer_nonsta_dir.m` is not yet ported) |
+| Independent change principle for direction inference      | ✓ (`infer_nonsta_dir.m` non-GP path; plus a GP-bandwidth path via scikit-learn for the small-T regime) |
 | Driving-force visualization (kPCA)                        | ☐ (TODO; the MATLAB `cd_non_con_fun.m` is not yet ported)  |
 | MIMIC-III data preparation                                | Out of scope (clinical data access required) |
 

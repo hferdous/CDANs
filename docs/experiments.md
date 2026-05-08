@@ -50,12 +50,14 @@ The defaults in `experiments/runner.py` mirror the MATLAB driver settings:
   own lagged structure rather than the paper's hand-curated initial graph.
   Use `--tau-max 1` to keep this minimal, or higher values to look further
   back.
-* **GP-learned bandwidths are not yet ported.** The MATLAB code uses
+* **GP-learned bandwidths: partially ported.** The MATLAB code uses
   `if_GP1=1` for KCI and `if_GP2=1` for the independent-change kernel
-  when `T <= 1000`. The Python KCI test uses fixed-bandwidth Gaussian
-  kernels; this is the same algorithm with a different hyperparameter
-  learning strategy. Results should be qualitatively similar but won't
-  be bit-exact.
+  when `T <= 1000`. The independent-change side is now ported via
+  `independent_change_width="gp"`, which fits an ARD-RBF Gaussian
+  process via scikit-learn and uses the marginal-likelihood-optimized
+  length scales as bandwidths. The KCI test still uses fixed-bandwidth
+  Gaussian kernels — that's the remaining gap. Results should be
+  qualitatively similar to the MATLAB reference but won't be bit-exact.
 * **Output comparison is left to the caller.** The MATLAB experiments
   save `output.mat` with the recovered adjacency matrices; comparing
   them programmatically would require `scipy.io.loadmat`.
