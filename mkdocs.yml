@@ -1,0 +1,102 @@
+site_name: CDANs
+site_description: Temporal Causal Discovery from Autocorrelated and Non-Stationary Time Series Data
+site_url: https://hferdous.github.io/CDANs/
+repo_url: https://github.com/hferdous/CDANs
+repo_name: hferdous/CDANs
+copyright: Copyright &copy; 2023 Muhammad Hasan Ferdous, Uzma Hasan, Md Osman Gani
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: numpy
+            show_source: false
+            show_root_heading: true
+            show_root_full_path: false
+            show_signature_annotations: true
+            separate_signature: true
+            line_length: 80
+            merge_init_into_class: true
+            members_order: source
+            heading_level: 3
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: installation.md
+      - Quickstart: quickstart.md
+  - Algorithm:
+      - Step-by-step: algorithm.md
+      - Step 1 — Lagged adjacencies (PCMCI): step1.md
+      - Step 2 — Partial graph: step2.md
+      - Step 3 — Skeleton refinement: step3.md
+      - Step 4 — Orientation: step4.md
+  - Plotting: plotting.md
+  - Evaluation: evaluation.md
+  - Reference:
+      - CDANs class: api/cdans.md
+      - Algorithm steps: api/steps.md
+      - CI tests: api/ci_tests.md
+      - Graph types: api/graph.md
+      - Independent change: api/independent_change.md
+      - Plotting: api/plotting.md
+      - Evaluation: api/evaluation.md
+      - Utilities: api/utils.md
+  - Reproducing the paper: experiments.md
+  - Citation: citation.md

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "CDANs: Temporal Causal Discovery from Autocorrelated and Non-Stationary Time Series Data"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/hferdous/CDANs"
+authors:
+  - family-names: Ferdous
+    given-names: Muhammad Hasan
+  - family-names: Hasan
+    given-names: Uzma
+  - family-names: Gani
+    given-names: Md Osman
+preferred-citation:
+  type: conference-paper
+  title: "CDANs: Temporal Causal Discovery from Autocorrelated and Non-Stationary Time Series Data"
+  authors:
+    - family-names: Ferdous
+      given-names: Muhammad Hasan
+    - family-names: Hasan
+      given-names: Uzma
+    - family-names: Gani
+      given-names: Md Osman
+  collection-title: "Proceedings of the 8th Machine Learning for Healthcare Conference"
+  collection-type: proceedings
+  publisher:
+    name: PMLR
+  volume: 219
+  year: 2023
+  url: "https://proceedings.mlr.press/v219/ferdous23a.html"
