@@ -1286,12 +1286,14 @@ same pattern; adding them is a five-line change in <code>experiments/loaders.py<
   own lagged structure rather than the paper's hand-curated initial graph.
   Use <code>--tau-max 1</code> to keep this minimal, or higher values to look further
   back.</li>
-<li><strong>GP-learned bandwidths are not yet ported.</strong> The MATLAB code uses
+<li><strong>GP-learned bandwidths: partially ported.</strong> The MATLAB code uses
   <code>if_GP1=1</code> for KCI and <code>if_GP2=1</code> for the independent-change kernel
-  when <code>T &lt;= 1000</code>. The Python KCI test uses fixed-bandwidth Gaussian
-  kernels; this is the same algorithm with a different hyperparameter
-  learning strategy. Results should be qualitatively similar but won't
-  be bit-exact.</li>
+  when <code>T &lt;= 1000</code>. The independent-change side is now ported via
+  <code>independent_change_width="gp"</code>, which fits an ARD-RBF Gaussian
+  process via scikit-learn and uses the marginal-likelihood-optimized
+  length scales as bandwidths. The KCI test still uses fixed-bandwidth
+  Gaussian kernels — that's the remaining gap. Results should be
+  qualitatively similar to the MATLAB reference but won't be bit-exact.</li>
 <li><strong>Output comparison is left to the caller.</strong> The MATLAB experiments
   save <code>output.mat</code> with the recovered adjacency matrices; comparing
   them programmatically would require <code>scipy.io.loadmat</code>.</li>

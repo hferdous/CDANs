@@ -1226,8 +1226,11 @@ step-by-step walkthrough</a>.</p>
   changing modules. Self-contained KCI test (no <code>causal-learn</code> dependency)
   and self-contained PCMCI implementation (no <code>tigramite</code> dependency).</li>
 <li><strong>Not yet implemented:</strong> the kernel-PCA driving-force visualization
-  (<code>cd_non_con_fun.m</code> in the MATLAB reference) and the GP-learned kernel
-  bandwidths used by the MATLAB code for <code>T &lt;= 1000</code>.</li>
+  (<code>cd_non_con_fun.m</code> in the MATLAB reference) and the GP-learned KCI
+  kernel widths (<code>if_GP1=1</code>) used by the MATLAB code for <code>T &lt;= 1000</code>.
+  The independent-change side of the GP path is now available via
+  <code>independent_change_width="gp"</code> (sklearn ARD-RBF marginal-likelihood
+  optimization).</li>
 <li><strong>Empirical defaults are heuristics.</strong> The independent-change kernel
   bandwidth's <code>"auto"</code> mode uses an empirically-tuned multiplier of the
   median heuristic; see <a href="step4/#auto-kernel-bandwidth">the auto-bandwidth section</a>

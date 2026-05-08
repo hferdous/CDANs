@@ -1111,9 +1111,13 @@
 
 
 <h1 id="independent-change-principle">Independent change principle<a class="headerlink" href="#independent-change-principle" title="Permanent link">&para;</a></h1>
-<p>Direct port of the non-GP path of <code>infer_nonsta_dir.m</code> from the MATLAB
-reference. See <a href="../../step4/#independent-change-principle-details">Step 4 — Orientation</a>
-for the math and the auto-bandwidth heuristic.</p>
+<p>Port of <code>infer_nonsta_dir.m</code> from the MATLAB reference, covering both
+the fixed-bandwidth path and the GP-learned-bandwidth path (via the
+<code>"gp"</code> mode, which uses scikit-learn's ARD-RBF Gaussian process
+regression in place of MATLAB's <code>gpml</code>/<code>minimize</code> machinery). See
+<a href="../../step4/#independent-change-principle-details">Step 4 — Orientation</a>
+for the math, the auto-bandwidth heuristic, and the picking-between-modes
+table.</p>
 
 
 <div class="doc doc-object doc-function">
