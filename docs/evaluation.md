@@ -11,9 +11,9 @@ from cdans import CDANs, evaluate_graph
 from cdans.utils import generate_synthetic_cdans
 
 dataset = generate_synthetic_cdans(
-    n_vars=5, n_samples=400, tau_max=2, n_changing=2, seed=42,
+    n_vars=4, n_samples=800, tau_max=1, n_changing=1, seed=7,
 )
-result = CDANs(tau_max=2, ci_test="kci").fit(dataset.data)
+result = CDANs(tau_max=1, ci_test="kci").fit(dataset.data)
 
 metrics = evaluate_graph(result.graph, dataset)
 print(metrics.summary())
@@ -24,15 +24,22 @@ Output:
 ```
 Structure recovery metrics
 ============================================================
-  Lagged edges               TP= 11 FP= 12 FN=  2  P=0.48 R=0.85 F1=0.61 FDR=0.52
-  Contemp skeleton           TP=  0 FP=  3 FN=  2  P=0.00 R=0.00 F1=0.00 FDR=1.00
-  Contemp directed           TP=  0 FP=  3 FN=  2  P=0.00 R=0.00 F1=0.00 FDR=1.00
-  Changing modules           TP=  2 FP=  2 FN=  0  P=0.50 R=1.00 F1=0.67 FDR=0.50
+  Lagged edges               TP=  9 FP=  0 FN=  0  P=1.00 R=1.00 F1=1.00 FDR=0.00
+  Contemp skeleton           TP=  2 FP=  0 FN=  0  P=1.00 R=1.00 F1=1.00 FDR=0.00
+  Contemp directed           TP=  2 FP=  0 FN=  0  P=1.00 R=1.00 F1=1.00 FDR=0.00
+  Changing modules           TP=  1 FP=  0 FN=  0  P=1.00 R=1.00 F1=1.00 FDR=0.00
+  ----------------------------------------------------------
+  Total (directed)           TP= 12 FP=  0 FN=  0  P=1.00 R=1.00 F1=1.00 FDR=0.00
+  Total (skeleton)           TP= 12 FP=  0 FN=  0  P=1.00 R=1.00 F1=1.00 FDR=0.00
 
-  SHD (lagged):    14
-  SHD (contemp):   5
-  SHD (total):     19
+  SHD (lagged):    0
+  SHD (contemp):   0
+  SHD (total):     0
 ```
+
+This is a clean recovery on a small, easy DGP. For larger problems where
+the algorithm doesn't reach 100%, see [the experiments page](experiments.md)
+for realistic 6-variable benchmark numbers.
 
 ## What's reported
 

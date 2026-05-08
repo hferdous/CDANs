@@ -1,7 +1,5 @@
 # CDANs
 
-[![PyPI](https://img.shields.io/pypi/v/cdans.svg)](https://pypi.org/project/cdans/)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
@@ -107,8 +105,8 @@ the recovered graph with standard structure-recovery metrics:
 from cdans import CDANs, evaluate_graph
 from cdans.utils import generate_synthetic_cdans
 
-dataset = generate_synthetic_cdans(n_vars=5, n_samples=400, tau_max=2, seed=42)
-result = CDANs(tau_max=2, ci_test="kci").fit(dataset.data)
+dataset = generate_synthetic_cdans(n_vars=4, n_samples=800, tau_max=1, n_changing=1, seed=7)
+result = CDANs(tau_max=1, ci_test="kci").fit(dataset.data)
 
 metrics = evaluate_graph(result.graph, dataset)
 print(metrics.summary())
