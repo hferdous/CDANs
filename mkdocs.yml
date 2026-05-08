@@ -81,6 +81,7 @@ nav:
   - Getting started:
       - Installation: installation.md
       - Quickstart: quickstart.md
+      - Using your own CSV data: csv-data.md
   - Algorithm:
       - Step-by-step: algorithm.md
       - Step 1 — Lagged adjacencies (PCMCI): step1.md
