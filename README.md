@@ -1,7 +1,11 @@
 # CDANs
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![PyPI](https://img.shields.io/pypi/v/cdans.svg)](https://pypi.org/project/cdans/)
+[![Python versions](https://img.shields.io/pypi/pyversions/cdans.svg)](https://pypi.org/project/cdans/)
+[![License](https://img.shields.io/pypi/l/cdans.svg)](https://github.com/hferdous/CDANs/blob/master/LICENSE)
+[![Downloads](https://img.shields.io/pypi/dm/cdans.svg)](https://pypi.org/project/cdans/)
+[![Status](https://img.shields.io/pypi/status/cdans.svg)](https://pypi.org/project/cdans/)
+[![DOI](https://zenodo.org/badge/598412124.svg)](https://doi.org/10.5281/zenodo.20092382)
 
 **Temporal Causal Discovery from Autocorrelated and Non-Stationary Time Series Data.**
 

@@ -1,30 +1,46 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the paper below."
-title: "CDANs: Temporal Causal Discovery from Autocorrelated and Non-Stationary Time Series Data"
-version: 0.1.0
-license: MIT
-repository-code: "https://github.com/hferdous/CDANs"
+message: "If you use this software, please cite both the paper and this software release."
+type: software
+title: "cdans: Python implementation of CDANs"
+version: "0.1.1"
+date-released: 2026-05-08
 authors:
-  - family-names: Ferdous
-    given-names: Muhammad Hasan
-  - family-names: Hasan
-    given-names: Uzma
-  - family-names: Gani
-    given-names: Md Osman
+  - given-names: "Muhammad Hasan"
+    family-names: "Ferdous"
+    email: "h.ferdous@umbc.edu"
+    affiliation: "University of Maryland, Baltimore County"
+  - given-names: "Uzma"
+    family-names: "Hasan"
+  - given-names: "Md Osman"
+    family-names: "Gani"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20092382"
+    description: "Concept DOI for all versions of the software."
+url: "https://github.com/hferdous/CDANs"
+repository-code: "https://github.com/hferdous/CDANs"
+license: MIT
+keywords:
+  - causal discovery
+  - time series
+  - non-stationary
+  - autocorrelated
+  - PCMCI
+  - CD-NOD
 preferred-citation:
   type: conference-paper
   title: "CDANs: Temporal Causal Discovery from Autocorrelated and Non-Stationary Time Series Data"
   authors:
-    - family-names: Ferdous
-      given-names: Muhammad Hasan
-    - family-names: Hasan
-      given-names: Uzma
-    - family-names: Gani
-      given-names: Md Osman
+    - given-names: "Muhammad Hasan"
+      family-names: "Ferdous"
+    - given-names: "Uzma"
+      family-names: "Hasan"
+    - given-names: "Md Osman"
+      family-names: "Gani"
+  year: 2023
   collection-title: "Proceedings of the 8th Machine Learning for Healthcare Conference"
   collection-type: proceedings
   publisher:
-    name: PMLR
+    name: "PMLR"
   volume: 219
-  year: 2023
   url: "https://proceedings.mlr.press/v219/ferdous23a.html"
